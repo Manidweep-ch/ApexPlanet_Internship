@@ -1,0 +1,234 @@
+/* Shared page styling for Task-3 */
+
+/* Root-level defaults for the whole page. This is like setting global font and base colors. */
+:root {
+    color-scheme: light;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef2f7;
+    color: #1f2937;
+}
+
+/* Make padding and sizing behave consistently on every element. */
+* {
+    box-sizing: border-box;
+}
+
+/* Page background and default spacing for the body. */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #eef2f7 0%, #f8fafc 100%);
+}
+
+/* Default link color and hover style used in all pages. */
+a {
+    color: #2563eb;
+}
+/* Underline links on hover for better interactivity. */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container wraps the main content on every page and centers it. */
+.container {
+    width: min(100%, 980px);
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Card style used for the main white panels on each page. */
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 18px 60px rgba(15, 23, 42, 0.08);
+    padding: 32px;
+}
+
+/* Utility class to center text inside a box. */
+.center {
+    text-align: center;
+}
+
+/* Heading style used for page titles like Login, Dashboard, and View Posts. */
+.heading {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 2.2vw, 2.6rem);
+    letter-spacing: -0.04em;
+    color: #111827;
+}
+
+/* Form layout for login, register, create post, and edit post pages. */
+.form-grid {
+    display: grid;
+    gap: 18px;
+}
+
+/* Label styling for form fields. */
+.form-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* Input and textarea styling for form fields across all pages. */
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 1rem;
+    background: #f8fafc;
+    color: #0f172a;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus style for text inputs and textareas to improve usability. */
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* Textarea minimum height and resizing behavior. */
+textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+/* Button and link button shared style for actions across the app. */
+.button,
+.link-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover effect for buttons and link buttons. */
+.button:hover,
+.link-button:hover {
+    transform: translateY(-1px);
+}
+
+/* Primary button style for main actions like Login or Create Post. */
+.button.primary,
+.link-button.primary {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* Success button style for positive actions like Update or Edit. */
+.button.success,
+.link-button.success {
+    background: #16a34a;
+    color: #ffffff;
+}
+
+/* Danger button style for delete actions. */
+.button.danger,
+.link-button.danger {
+    background: #dc2626;
+    color: #ffffff;
+}
+
+/* Secondary button style for less-important links and actions. */
+.button.secondary,
+.link-button.secondary {
+    background: #475569;
+    color: #ffffff;
+}
+
+/* Makes buttons stretch full width when needed. */
+.button.full-width,
+.link-button.full-width {
+    width: 100%;
+}
+
+/* Layout for groups of buttons and links. */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+/* Post card styling for each post item on view_posts.php. */
+.post-card {
+    margin-bottom: 22px;
+    padding: 24px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
+}
+
+/* Post title styling inside each card. */
+.post-card h3 {
+    margin: 0 0 14px;
+    font-size: 1.5rem;
+    color: #0f172a;
+}
+
+/* Post content paragraphs inside each card. */
+.post-card p {
+    margin: 0 0 12px;
+    line-height: 1.7;
+    color: #334155;
+}
+
+/* Small metadata text like "Posted on" dates. */
+.post-meta {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.94rem;
+}
+
+/* Button row inside each post card (Edit/Delete). */
+.post-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+/* Alert style for error or warning messages on login/register pages. */
+.alert {
+    padding: 16px 18px;
+    border-radius: 16px;
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+    margin-bottom: 22px;
+}
+
+/* Width limit for login and registration cards. */
+.auth-card {
+    width: min(100%, 430px);
+    margin: 0 auto;
+}
+
+/* Responsive adjustments for smaller screens. */
+@media (max-width: 640px) {
+    .container {
+        padding: 18px;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+}
