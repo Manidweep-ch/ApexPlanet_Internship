@@ -6,7 +6,7 @@ This project is a PHP/MySQL blog application updated for Task 4. It now supports
 
 The app now supports:
 
-- Registering accounts with roles: `user`, `editor`, `admin`
+- Registering accounts with roles: `user`, `admin`
 - Logging in with secure password verification
 - Creating posts linked to the logged-in user
 - Viewing all posts or just the current user's posts
